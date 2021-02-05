@@ -33,7 +33,7 @@ namespace _24HrChallenge.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<Note> Notes { get; set; } //<--- Added this
+        public DbSet<Post> Posts { get; set; } //<--- Added this
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
