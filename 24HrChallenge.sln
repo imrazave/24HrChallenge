@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24HrChallenge.WebAPI", "24H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24HrChallenge.Services", "24HrChallenge.Services\24HrChallenge.Services.csproj", "{42FC3F60-11EF-4EAE-8DE5-15246600CADD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24HrChallenge.Data", "24HrChallenge.Data\24HrChallenge.Data.csproj", "{88BFCCB7-3925-4409-A3AE-EC39378D7877}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24HrChallenge.Models", "24HrChallenge.Models\24HrChallenge.Models.csproj", "{64EDEDD2-B15A-455B-A178-0A4BB3B1104E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{42FC3F60-11EF-4EAE-8DE5-15246600CADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42FC3F60-11EF-4EAE-8DE5-15246600CADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42FC3F60-11EF-4EAE-8DE5-15246600CADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88BFCCB7-3925-4409-A3AE-EC39378D7877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88BFCCB7-3925-4409-A3AE-EC39378D7877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88BFCCB7-3925-4409-A3AE-EC39378D7877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88BFCCB7-3925-4409-A3AE-EC39378D7877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64EDEDD2-B15A-455B-A178-0A4BB3B1104E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64EDEDD2-B15A-455B-A178-0A4BB3B1104E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64EDEDD2-B15A-455B-A178-0A4BB3B1104E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64EDEDD2-B15A-455B-A178-0A4BB3B1104E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
