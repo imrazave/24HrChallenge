@@ -11,16 +11,18 @@ namespace _24HrChallenge.Data
     {
 
         [Key]
-        public int PostId { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        public Guid UserId { get; set; }
+        public Guid Author { get; set; }
 
         [Required]
         public string Title { get; set; }
 
         [Required]
-        public string PostContent { get; set; }
+        public string Text { get; set; }
+
+        public virtual List<Comment> Comments { get; set; } = new List<Comment>();
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }

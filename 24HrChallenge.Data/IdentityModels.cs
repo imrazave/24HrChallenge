@@ -33,7 +33,9 @@ namespace _24HrChallenge.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<Post> Posts { get; set; } //<--- Added this
+        public DbSet<Post> Posts { get; set; } //<--- This adds the Post data table
+        public DbSet<Comment> Comments { get; set; } // <---- This adds the Comment data table
+        public DbSet<Reply> Replies { get; set; } // <---- This adds the Reply data table
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
