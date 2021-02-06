@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace _24HrChallenge.Services
 {
-    class PostService
+    public class PostService
     {
         private readonly Guid _userId;
 
@@ -46,28 +46,14 @@ namespace _24HrChallenge.Services
                 var query =
                     ctx
                         .Posts
-                        .Where(e => e.Key]
-        public int Id { get; set; }
 
-        //Foreign Key
-        [ForeignKey(nameof(Comment))]
-        public int PostId { get; set; }
+                        .Where(e => e.Author == _userId)
 
-        [Required]
-        public int Text { get; set; }
-
-        [Required]
-        public Guid Author { get; set; }
-
-        [Required]
-        public DateTimeOffset CreatedUtc { get; set; }
-
-        public DateTimeOffset? ModifiedUtc { get; set; } == Author)
                         .Select(
                             e =>
                                 new PostListItem
                                 {
-                                    PostId = e.PostId,
+                                    PostId = e.Id,
                                     Title = e.Title,
                                     Text = e.Text,
                                     CreatedUtc = e.CreatedUtc
