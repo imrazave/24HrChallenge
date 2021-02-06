@@ -13,8 +13,7 @@ namespace _24HrChallenge.WebAPI.Controllers
     public class ReplyController : ApiController
     {
 
-        public class NoteController : ApiController
-        {
+        
 
 
             private ReplyService CreateReplyService()
@@ -84,5 +83,5 @@ namespace _24HrChallenge.WebAPI.Controllers
             }
 
         }
-    }
+    
 }
