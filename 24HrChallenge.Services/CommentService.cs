@@ -21,6 +21,7 @@ namespace _24HrChallenge.Services
             var entity =
                 new Comment()
                 {
+                    PostId = model.PostId,
                     Author = _userId,
                     Text = model.Content
                 };
