@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace _24HrChallenge.Services
 {
-    class CommentService
+    public class CommentService
     {
+        private readonly Guid _userId;
+
+        public CommentService(Guid userId)
+        {
+            _userId = userId;
+        }
+    }
+
+    public bool CreateComment(CommentCreate model)
+    {
+        var entity =
+            new CommentService()
     }
 }
