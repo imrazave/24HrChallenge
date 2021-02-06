@@ -12,11 +12,11 @@ namespace _24HrChallenge.Data
     {
         // Primary Key
         [Key]
-        public int Id { get; set; }
+        public int PostId { get; set; }
 
         // Foreign Key
         [ForeignKey(nameof(Post))]
-        public int Id { get; set; }
+        public int UserId { get; set; }
 
         // Navigation Property
         [Required]
