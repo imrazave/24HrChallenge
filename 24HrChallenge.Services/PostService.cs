@@ -2,6 +2,8 @@
 using _24HrChallenge.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,7 +46,9 @@ namespace _24HrChallenge.Services
                 var query =
                     ctx
                         .Posts
+
                         .Where(e => e.Author == _userId)
+
                         .Select(
                             e =>
                                 new PostListItem

@@ -31,6 +31,7 @@ namespace _24HrChallenge.Data
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
 
+
         public virtual List<Reply> Replies { get; set; } = new List<Reply>();
     }
 }

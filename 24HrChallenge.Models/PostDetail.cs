@@ -14,6 +14,7 @@ namespace _24HrChallenge.Models
         public string Text { get; set; }
         //public virtual List<Comment> Comments { get; set; } = new List<Comment>();
 
+
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
        
