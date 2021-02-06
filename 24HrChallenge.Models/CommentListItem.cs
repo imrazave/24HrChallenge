@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace _24HrChallenge.Models
 {
-    public class Class1
+    public class CommentListItem
     {
+        public int Id { get; set; }
+        public string Text { get; set; }
     }
 }
