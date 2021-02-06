@@ -16,10 +16,10 @@ namespace _24HrChallenge.Data
 
         // Foreign Key
         [ForeignKey(nameof(Post))]
-        public int Id { get; set; }
+        public int PostId { get; set; }
 
         // Navigation Property
-        [Required]
+        
         public virtual Post Post { get; set; }
 
         [Required]
