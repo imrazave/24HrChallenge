@@ -19,6 +19,7 @@ namespace _24HrChallenge.Data
         public int PostId { get; set; }
 
         // Navigation Property
+
         public virtual Post Post { get; set; }
 
         [Required]

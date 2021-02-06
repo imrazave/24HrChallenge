@@ -22,7 +22,7 @@ namespace _24HrChallenge.Services
             var entity =
                 new Post()
                 {
-                    OwnerId = _userId,
+                    Author = _userId,
                     Title = model.Title,
                     Text = model.Text,
                     CreatedUtc = DateTimeOffset.Now
@@ -30,7 +30,7 @@ namespace _24HrChallenge.Services
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Post.Add(entity);
+                ctx.Posts.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
 
@@ -43,13 +43,13 @@ namespace _24HrChallenge.Services
             {
                 var query =
                     ctx
-                        .Post
-                        .Where(e => e.OwnerId == _userId)
+                        .Posts
+                        .Where(e => e.Author == _userId)
                         .Select(
                             e =>
                                 new PostListItem
                                 {
-                                    PostId = e.PostId,
+                                    PostId = e.Id,
                                     Title = e.Title,
                                     Text = e.Text,
                                     CreatedUtc = e.CreatedUtc

@@ -15,7 +15,9 @@ namespace _24HrChallenge.Data
 
         //Foreign Key
         [ForeignKey(nameof(Comment))]
-        public int PostId { get; set; }
+        public int CommentId { get; set; }
+
+        public virtual Comment Comment {get; set;}
 
         [Required]
         public int Text { get; set; }
