@@ -1,4 +1,5 @@
 ﻿using _24HrChallenge.Data;
+using _24HrChallenge.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,8 +22,7 @@ namespace _24HrChallenge.Services
                 new Comment()
                 {
                     PostId = _postId,
-                    UserId = model.UserId,
-                    Text = model.Text
+                    Text = model.Content
                 };
 
             using (var ctx = new ApplicationDbContext())
