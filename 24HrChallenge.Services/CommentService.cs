@@ -10,10 +10,10 @@ namespace _24HrChallenge.Services
 {
     public class CommentService
     {
-        private readonly Guid _postId;
+        private readonly Guid _userId;
         public CommentService(Guid userId)
         {
-            _postId = userId;
+            _userId = userId;
         }
 
         public bool CreateComment(CommentCreate model)
@@ -21,7 +21,7 @@ namespace _24HrChallenge.Services
             var entity =
                 new Comment()
                 {
-                    PostId = _postId,
+                    Author = _userId,
                     Text = model.Content
                 };
 
@@ -44,7 +44,7 @@ namespace _24HrChallenge.Services
                         e =>
                         new CommentListItem
                         {
-                            CommentId = e.PostId,
+                            Id = e.PostId,
                             Text = e.Text,
                         }
                         );

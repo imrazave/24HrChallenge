@@ -12,5 +12,6 @@ namespace _24HrChallenge.Models
         [Required]
         [MaxLength(140)]
         public string Content { get; set; }
+
     }
 }
