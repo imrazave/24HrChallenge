@@ -2,6 +2,8 @@
 using _24HrChallenge.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +24,7 @@ namespace _24HrChallenge.Services
             var entity =
                 new Post()
                 {
-                    OwnerId = _userId,
+                    Author = _userId,
                     Title = model.Title,
                     Text = model.Text,
                     CreatedUtc = DateTimeOffset.Now
@@ -30,7 +32,7 @@ namespace _24HrChallenge.Services
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Post.Add(entity);
+                ctx.Posts.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
 
@@ -43,8 +45,24 @@ namespace _24HrChallenge.Services
             {
                 var query =
                     ctx
-                        .Post
-                        .Where(e => e.OwnerId == _userId)
+                        .Posts
+                        .Where(e => e.Key]
+        public int Id { get; set; }
+
+        //Foreign Key
+        [ForeignKey(nameof(Comment))]
+        public int PostId { get; set; }
+
+        [Required]
+        public int Text { get; set; }
+
+        [Required]
+        public Guid Author { get; set; }
+
+        [Required]
+        public DateTimeOffset CreatedUtc { get; set; }
+
+        public DateTimeOffset? ModifiedUtc { get; set; } == Author)
                         .Select(
                             e =>
                                 new PostListItem

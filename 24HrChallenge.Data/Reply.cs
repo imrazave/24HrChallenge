@@ -11,15 +11,16 @@ namespace _24HrChallenge.Data
     public class Reply
     {
         [Key]
-        public int Id { get; set; }
+        public int ReplyId { get; set; }
 
         //Foreign Key
         [ForeignKey(nameof(Comment))]
-        public int PostId { get; set; }
+        public int CommentId { get; set; }
+        public virtual Comment Comment { get; set; } // Navigation Property
 
         [Required]
-        public int Text { get; set; }
-
+        public string Text { get; set; }
+        
         [Required]
         public Guid Author { get; set; }
 
