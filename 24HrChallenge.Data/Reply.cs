@@ -23,6 +23,10 @@ namespace _24HrChallenge.Data
         [Required]
         public Guid Author { get; set; }
 
+        [Required]
+        public DateTimeOffset CreatedUtc { get; set; }
+
+        public DateTimeOffset? ModifiedUtc { get; set; }
 
 
 
