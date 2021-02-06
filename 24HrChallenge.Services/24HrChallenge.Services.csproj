@@ -61,5 +61,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\24HrChallenge.Data\24HrChallenge.Data.csproj">
+      <Project>{88bfccb7-3925-4409-a3ae-ec39378d7877}</Project>
+      <Name>24HrChallenge.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\24HrChallenge.Models\24HrChallenge.Models.csproj">
+      <Project>{64ededd2-b15a-455b-a178-0a4bb3b1104e}</Project>
+      <Name>24HrChallenge.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
