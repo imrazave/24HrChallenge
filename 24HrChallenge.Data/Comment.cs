@@ -16,17 +16,19 @@ namespace _24HrChallenge.Data
 
         // Foreign Key
         [ForeignKey(nameof(Post))]
-        public int Id { get; set; }
+        public int PostId { get; set; }
 
         // Navigation Property
-        [Required]
         public virtual Post Post { get; set; }
 
         [Required]
         public string Text { get; set; }
         
         [Required]
-        public Guid userId { get; set; }
+        public Guid Author { get; set; }
+
+        [Required]
+        public DateTimeOffset CreatedUtc { get; set; }
 
         public virtual List<Reply> Replies { get; set; } = new List<Reply>();
     }
