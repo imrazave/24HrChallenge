@@ -11,7 +11,7 @@ namespace _24HrChallenge.Data
     public class Reply
     {
         [Key]
-        public int Id { get; set; }
+        public int ReplyId { get; set; }
 
         //Foreign Key
         [ForeignKey(nameof(Comment))]
@@ -19,9 +19,10 @@ namespace _24HrChallenge.Data
 
         public virtual Comment Comment {get; set;}
 
-        [Required]
-        public int Text { get; set; }
 
+        [Required]
+        public string Text { get; set; }
+        
         [Required]
         public Guid Author { get; set; }
 

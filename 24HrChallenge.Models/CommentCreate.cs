@@ -13,5 +13,10 @@ namespace _24HrChallenge.Models
         [MaxLength(140)]
         public string Content { get; set; }
 
+
+
+        
+        public int PostId { get; set; }
+
     }
 }

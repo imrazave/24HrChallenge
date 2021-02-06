@@ -49,7 +49,10 @@ namespace _24HrChallenge.Data
                 .Add(new IdentityUserRoleConfiguration());
         }
 
+<<<<<<< HEAD
       
+=======
+>>>>>>> a19e8dc76da5aa1c54f67793492400fa82b67bd7
     }
 
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>

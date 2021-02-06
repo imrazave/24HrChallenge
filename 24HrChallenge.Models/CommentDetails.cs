@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace _24HrChallenge.Models
 {
-    public class PostDetail
+    public class CommentDetails
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Text { get; set; }
-        //public virtual List<Comment> Comments { get; set; } = new List<Comment>();
 
+        public int CommentId { get; set; }
+        
+        public string Text { get; set; }
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
-       
+
+        [Display(Name = "Modified")]
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

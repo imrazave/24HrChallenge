@@ -13,5 +13,7 @@ namespace _24HrChallenge.Models
         [Required]
         [MaxLength(8000)]
         public string Text { get; set; }
+
+        public int CommentId { get; set; }
     }
 }
