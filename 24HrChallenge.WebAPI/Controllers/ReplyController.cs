@@ -25,16 +25,17 @@ namespace _24HrChallenge.WebAPI.Controllers
             }
 
 
-            public IHttpActionResult Get()
+            public IHttpActionResult Get(int id)
             {
 
-                CommentService commentService = new CommentService();
-                var commentId = commentService.GetCommentID();
-
                 ReplyService replyService = CreateReplyService();
+                var userId = Guid.Parse(User.Identity.GetUserId());
 
+                CommentService commentService = new CommentService(userId);
+                var comment = commentService.GetCommentById(id);
+                
 
-                var replies = replyService.GetReplies(int commentId);
+                var replies = replyService.GetReplies(comment.CommentId);
                 return Ok(replies);
             }
 

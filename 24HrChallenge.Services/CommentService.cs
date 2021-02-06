@@ -52,5 +52,23 @@ namespace _24HrChallenge.Services
                 return query.ToArray();
             }
         }
+
+        public CommentDetails GetCommentById(int id)
+        {
+
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Comments.Single(e => e.Id == id && e.Author == _userId);
+                return
+                    new CommentDetails
+                    {
+                        CommentId = entity.Id,
+                        Text = entity.Text,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+                    };
+            }
+        }
     }
 }
