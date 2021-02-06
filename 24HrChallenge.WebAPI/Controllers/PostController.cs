@@ -1,4 +1,7 @@
-﻿using System;
+﻿using _24HrChallenge.Models;
+using _24HrChallenge.Services;
+using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -25,7 +28,7 @@ namespace _24HrChallenge.WebAPI.Controllers
 
             var service = CreatePostService();
 
-            if (!service.CreateNote(post))
+            if (!service.CreatePost(post))
                 return InternalServerError();
 
             return Ok();
@@ -37,9 +40,5 @@ namespace _24HrChallenge.WebAPI.Controllers
             var posts = postService.GetPost();
             return Ok(posts);
         }
-
-
-
-
     }
 }

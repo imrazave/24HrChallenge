@@ -39,7 +39,7 @@ namespace _24HrChallenge.Services
                 var query =
                     ctx
                     .Comments
-                    .Where(e => e.OwnerId == _userId)
+                    .Where(e => e.Author == _userId)
                     .Select(
                         e =>
                         new CommentListItem

@@ -1,4 +1,6 @@
-﻿using _24HrChallenge.Services;
+﻿using _24HrChallenge.Models;
+using _24HrChallenge.Services;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,7 @@ namespace _24HrChallenge.WebAPI.Controllers
     {
         private CommentService CreateCommentService()
         {
-            var postId = Guid.Parse(post.Identity.GetUserId());
+            var postId = Guid.Parse(User.Identity.GetUserId());
             var commentService = new CommentService(postId);
             return commentService;
         }
@@ -21,7 +23,7 @@ namespace _24HrChallenge.WebAPI.Controllers
         public IHttpActionResult Get()
         {
             CommentService commentService = CreateCommentService();
-            var notes = commentService.GetComment();
+            var comments = commentService.GetComment();
             return Ok(comments);
         }
 
