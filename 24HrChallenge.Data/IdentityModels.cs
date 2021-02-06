@@ -49,10 +49,6 @@ namespace _24HrChallenge.Data
                 .Add(new IdentityUserRoleConfiguration());
         }
 
-        public int SaveChanges()
-        {
-            throw new NotImplementedException();
-        }
     }
 
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
