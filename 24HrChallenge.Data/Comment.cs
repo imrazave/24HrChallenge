@@ -19,14 +19,17 @@ namespace _24HrChallenge.Data
         public int PostId { get; set; }
 
         // Navigation Property
-        
+
         public virtual Post Post { get; set; }
 
         [Required]
         public string Text { get; set; }
         
         [Required]
-        public Guid userId { get; set; }
+        public Guid Author { get; set; }
+
+        [Required]
+        public DateTimeOffset CreatedUtc { get; set; }
 
         public virtual List<Reply> Replies { get; set; } = new List<Reply>();
     }

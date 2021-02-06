@@ -41,9 +41,5 @@ namespace _24HrChallenge.WebAPI.Controllers
             var posts = postService.GetPost();
             return Ok(posts);
         }
-
-
-
-
     }
 }
